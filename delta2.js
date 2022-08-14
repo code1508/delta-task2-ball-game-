@@ -85,6 +85,7 @@ function movePlatforms(){
    addNewPlatforms();
    drawPlatforms();
    drawBall();
+   checkGameOver();
    requestAnimationFrame(movePlatforms);
   }
       
@@ -102,16 +103,6 @@ function checkGameOver() {
 }
 checkGameOver();
 
-
-
-
-function reset() {
-  ball = { x:100, y:60, r: 10 };
-  platforms = [{ x: 0, y: canvasH,holeX:holeX() }];
-  clearInterval(interval);
-  clearInterval(scoreInterval);
-  movePlatforms();
-}
 
 
 function addNewPlatforms(){
